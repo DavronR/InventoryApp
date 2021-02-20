@@ -1,0 +1,23 @@
+
+{% extends "productapp/base.html" %}
+
+{% load static %}
+{% block content %}
+
+    <table style="border: 3px solid red;">
+        <thead>
+            <tr>
+                <th>Product Name</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for product in products %}
+                <tr>
+                    <td>{{product.name}}</td>
+                </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+{% endblock content %}
+
+
